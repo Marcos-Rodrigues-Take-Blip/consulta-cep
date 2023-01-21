@@ -11,7 +11,7 @@ const showData = (result)=>{
 }
 const option = {
     method: 'GET',
-   // mode: 'cors',
+    mode: 'cors',
     cache: 'default'
 }
     
