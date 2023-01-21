@@ -19,6 +19,10 @@ fetch(`https://viacep.com.br/ws/${numeroCEP}/json/`, option)
 .then((response)=>{response.json()
     .then(data => showData(data))
 })
-.catch(window.alert("CEP NÃO ENCONTRADO"))
-    cep.value = ""
-}
+.catch(error => {
+    if (error.response == undefined){
+        window.alert("errou")
+        cep.value = ""
+    }
+     
+})}
