@@ -11,7 +11,7 @@ const showData = (result)=>{
 }
 const option = {
     method: 'GET',
-    mode: 'cors',
+   // mode: 'cors',
     cache: 'default'
 }
     
@@ -26,3 +26,4 @@ fetch(`https://viacep.com.br/ws/${numeroCEP}/json/`, option)
     }
      
 })}
+
