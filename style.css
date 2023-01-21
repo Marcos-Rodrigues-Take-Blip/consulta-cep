@@ -1,0 +1,41 @@
+body {
+    background:  rgb(113, 113, 209);
+    font: normal 15pt Arial;
+   
+}
+
+header {
+    color: rgb(244, 244, 244);
+    text-align: center; 
+    
+}
+div {
+    background:rgb(157, 227, 186);
+ 
+    padding: 40px;
+    width:  500px;
+    margin: auto;
+    
+}
+input#logradouro{
+    
+        width: 300px;
+}
+input#bairro{
+    
+    width: 300px;
+}
+input#localidade{
+    
+    width: 300px;
+}
+input#uf{
+    
+    width: 300px;
+}
+footer {
+    color: aliceblue;
+    text-align: center;
+    font-style:  italic;
+
+}
