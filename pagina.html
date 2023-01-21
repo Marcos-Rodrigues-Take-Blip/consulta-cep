@@ -41,7 +41,14 @@
 <script>
        var button = document.querySelector('#cep')
        button.addEventListener("blur", consulta);
-      </script>    
+</script>
+<script>
+        var button = document.querySelector('#cep')
+        button.addEventListener("keypress", function(event) {
+            if (event.keyCode === 13){
+                consulta()
+        }})  
+</script>    
     
 </body>
 <footer>
