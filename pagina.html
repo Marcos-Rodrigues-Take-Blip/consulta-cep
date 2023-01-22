@@ -1,22 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta CEP</title>
-    <link href="https://marcos-rodrigues-js.github.io/consulta-cep/style.css" rel="stylesheet"/>
-    
+    <link rel="stylesheet" href="stiloCEP.css">
 </head>
 <body>
     <header><h1>Consulta CEP</h1></header>
 
     <div >
         <p>CEP:
-            <input type="text" id="cep">            
-        
+            <input type="text" id="cep">
             <input type="button" value="Consultar">
-            <h1>Dados do CEP abaixo</h1></p>
+            <h1>Dados do CEP abaixo</h1>
             <small>Rua:</small>
             <input type="text" name="numero" id="logradouro"></p>
             <small>Bairro:</small>
@@ -25,8 +23,6 @@
             <input type="text" name="numero" id="localidade"></p>
             <small>Estado</small>
             <input type="text" name="numero" id="uf">
-            
-            
     </div>
     <script>
         var input = document.getElementById("cep");
@@ -35,35 +31,29 @@
                 window.alert("[Erro] - Por favor digite o formato de cep, são apenas nove dígitos");
                 this.value = ""
             }});
-            
     </script>
-    <script src="https://marcos-rodrigues-js.github.io/consulta-cep/script.js"></script>
+    <script src="script.js"></script>
     <script>
         var input = document.getElementById("cep");
-var functionCalled = false;
-input.addEventListener("blur", function() {
-    if (input.value.length == 8 || input.value.length == 9  ) {
-        functionCalled = true;
-        consulta();
-    } else {
-        window.alert("[Erro] - Por favor digite o formato de cep, são apenas 8 dígitos");
-        this.value = "";
-    }
-});
-input.addEventListener("keypress", function(event) {
-    if (event.keyCode === 13 && input.value.length === 8) {
-        if (functionCalled) return;
-        functionCalled = true;
-        consulta();
-    }
-});
-
-
-        
-      </script>
+        var functionCalled = false;
+        input.addEventListener("blur", function() {
+            if (input.value.length === 9) {
+                functionCalled = true;
+                consulta();
+            } else {
+                
+                this.value = "";
+            }
+        });
+        input.addEventListener("keypress", function(event){
+            if (event.keyCode === 13 && input.value.length  <= 9 && !functionCalled) {
+                functionCalled = true;
+                consulta();
+            }
+        });
+    </script>
 </body>
 <footer>
     <p>&copy;Markalibert</p>
 </footer>
-
 </html>
