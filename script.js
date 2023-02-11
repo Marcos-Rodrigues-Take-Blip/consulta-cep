@@ -33,6 +33,6 @@ async function consulta() {
         
         window.alert("[ERRO-] - " + error.message);
         cep.value = ""
-        window.location.href = 'index.html'
+        window.location.href = 'https://marcos-rodrigues-js.github.io/consulta-cep/index.html'
     }
 }
