@@ -33,6 +33,6 @@ async function consulta() {
         
         window.alert("[ERRO-] - " + error.message);
         cep.value = ""
-        window.location.href = 'pagina.html'
+        window.location.href = 'index.html'
     }
 }
