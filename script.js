@@ -19,10 +19,14 @@ async function consulta() {
     }
 
     try {
+        
         const response = await fetch(`https://viacep.com.br/ws/${numeroCEP}/json/`, option);
         const data = await response.json();
-        if (!data) {
+        console.log(data)
+        if (!data || data.erro == true) {
+            
             throw new Error("Não foi possível encontrar um endereço com esse CEP");
+            
         }
         showData(data);
     } catch (error) {
