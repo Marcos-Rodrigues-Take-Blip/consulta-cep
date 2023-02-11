@@ -30,6 +30,9 @@ async function consulta() {
         }
         showData(data);
     } catch (error) {
-        window.alert("[ERRO] - " + error.message);
+        
+        window.alert("[ERRO-] - " + error.message);
+        cep.value = ""
+        window.location.href = 'pagina.html'
     }
 }
