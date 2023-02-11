@@ -33,25 +33,25 @@
             }});
     </script>
     <script src="https://marcos-rodrigues-js.github.io/consulta-cep/script.js"></script>
-    <script>
+   <script>
         var input = document.getElementById("cep");
         var functionCalled = false;
         input.addEventListener("blur", function() {
-            if (input.value.length === 9) {
+            if (input.value.length > 8 || input.value.length == 8) {
                 functionCalled = true;
                 consulta();
             } else {
-                
-                this.value = "";
+                this.value = "";                
             }
         });
         input.addEventListener("keypress", function(event){
-            if (event.keyCode === 13 && input.value.length  <= 9 && !functionCalled) {
+            if (event.keyCode === 13 && input.value.length  > 7) {
                 functionCalled = true;
                 consulta();
             }
         });
     </script>
+    
 </body>
 <footer>
     <p>&copy;Markalibert</p>
